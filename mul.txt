@@ -1,29 +1,44 @@
 #include<bits/stdc++.h>
-
-#define MOD 1000000007
-#define MAX 100001
-#define ll long long
-#define slld(t) scanf("%lld",&t)
-//#define sd(t) scanf("%d",&t)
-#define pd(t) printf("%d\n",t)
-#define plld(t) printf("%lld\n",t)
-#define pcc pair<char,char>
-#define pii pair<int,int>
-#define pll pair<ll,ll>
-#define tr(container,it) for(typeof(container.begin()) it=container.begin();it!=container.end();it++)
-#define mp(a,b) make_pair(a,b)
-#define F first
-#define S second
-
 using namespace std;
-
-int main() {
-         ll a, b;
-         cin >> a >> b;
-         
-         ll c=a*b;
-
-         
-         
-         cout << c << " ";
+# define ll long long
+#define rep(a,x,n)       for(ll a=x;a<n;a++)
+#define ROF(a,x,n)       for(ll a=x;a>=n;a--)
+# define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+#define MOD              1000000007
+int binaryserch(int arr[],int k,int s,int l)
+{
+    if(s>l)return -1;
+    int mid=(s+l)/2;
+    if(arr[mid]==k)return mid;
+    if(k>arr[mid])return binaryserch(arr,k,mid+1,l);
+    return binaryserch(arr,k,s,mid-1);
+}
+bool isPrime(int n)
+{
+    // Corner case
+    if (n <= 1)
+        return false;
+ 
+    // Check from 2 to square root of n
+    for (int i = 2; i <= sqrt(n); i++)
+        if (n % i == 0)
+            return false; 
+ 
+    return true;
+}
+int main()
+{    
+    ll g;
+     cin>>g;
+    while(g--)
+    {
+    int n,a=0;  cin>>n; 
+    rep(i,1,2000)
+    {
+       if(i%3!=0 && i%10!=3)a++;
+       if(a==n){cout<<i<<endl; break;}
+    }
+ 
+    }
+    return 0;
 }
