@@ -1,27 +1,19 @@
 #include<bits/stdc++.h>
-
-#define MOD 1000000007
-#define MAX 100001
-#define ll long long
-#define slld(t) scanf("%lld",&t)
-//#define sd(t) scanf("%d",&t)
-#define pd(t) printf("%d\n",t)
-#define plld(t) printf("%lld\n",t)
-#define pcc pair<char,char>
-#define pii pair<int,int>
-#define pll pair<ll,ll>
-#define tr(container,it) for(typeof(container.begin()) it=container.begin();it!=container.end();it++)
-#define mp(a,b) make_pair(a,b)
-#define F first
-#define S second
-
 using namespace std;
-
-int main() {
-         ll a, b;
-         cin >> a >> b;
-
-         ll c = a+b;
-         
-         cout << c << " ";
+# define ll long long
+#define rep(a,x,n)       for(ll a=x;a<n;a++)
+#define ROF(a,x,n)       for(ll a=x;a>=n;a--)
+# define fast ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+#define MOD              1000000007
+int main()
+{    
+    fast;
+    ll g; cin>>g; 
+    while(g--)
+    {
+       ll n;  cin>>n;   long double a[n],t=0;  rep(i,0,n){cin>>a[i];t+=a[i];}
+      long double p=0,pp=0;  sort(a,a+n);  t-=a[n-1];n--; pp=t/((long double)n);
+       p=((long double)a[n])+pp;  cout <<setprecision(10); cout << p << endl;
+    }
+    return 0;
 }
