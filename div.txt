@@ -6,6 +6,7 @@ int main() {
          cin >> a >> b;
          
          ll c = a/b;
-         double d=(double)a/b;
-         cout << c << " "<<d;
+         
+         
+         cout << c << "\n";
 }
