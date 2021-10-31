@@ -8,12 +8,8 @@ using namespace std;
 int main()
 {    
     fast;
-    ll g; cin>>g; 
-    while(g--)
-    {
-       ll n;  cin>>n;   long double a[n],t=0;  rep(i,0,n){cin>>a[i];t+=a[i];}
-      long double p=0,pp=0;  sort(a,a+n);  t-=a[n-1];n--; pp=t/((long double)n);
-       p=((long double)a[n])+pp;  cout <<setprecision(10); cout << p << endl;
-    }
-    return 0;
+    ll a, b;
+    cin >> a >> b;
+    
+    cout << a+b;
 }
